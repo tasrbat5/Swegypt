@@ -17,8 +17,8 @@ const DATA_FILE = path.join(DATA_DIR, 'visitors.json');
 const ADMIN_FILE = path.join(DATA_DIR, 'admin.json');
 const SESSIONS_FILE = path.join(DATA_DIR, 'sessions.json');
 
-const ADMIN_USERNAME = 'Admin';
-const ADMIN_PASSWORD = 'JAFAR';
+const ADMIN_USERNAME = process.env.ADMIN_USER || 'Admin';
+const ADMIN_PASS_HASH = process.env.ADMIN_HASH || '1c4565b8eb7f82bbe9ee456f5983ee25ef7d91788ddbc1d761d899b247439c5a';
 
 let applications = [];
 let liveVisitors = [];
@@ -99,7 +99,8 @@ function handleProcedure(fullPath, rawInput, req, res) {
   switch (procedure) {
     case 'login': {
       const { username, password } = input;
-      if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+      const inputHash = crypto.createHash('sha256').update(password || '').digest('hex');
+      if (username === ADMIN_USERNAME && inputHash === ADMIN_PASS_HASH) {
         const token = genId();
         adminSessions[token] = true;
         if (res) {

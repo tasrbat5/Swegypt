@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" rx="20" fill="#f8f9fa"/>
+  <rect x="40" y="40" width="720" height="420" rx="16" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  <circle cx="400" cy="180" r="60" fill="#FEF3C7" stroke="#F59E0B" stroke-width="3"/>
+  <text x="400" y="200" text-anchor="middle" font-size="50">⚠️</text>
+  <text x="400" y="290" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="28" fill="#1a1a1a" direction="rtl">تنبيه أمني هام</text>
+  <text x="400" y="330" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#6b7280" direction="rtl">لا تشارك بياناتك المصرفية مع أي شخص</text>
+  <text x="400" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#6b7280" direction="rtl">البنك لن يطلب منك كلمة المرور أو رمز OTP</text>
+</svg>
