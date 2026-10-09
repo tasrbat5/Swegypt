@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+  <rect width="300" height="400" fill="#f8f9fa" rx="16"/>
+  <rect x="80" y="40" width="140" height="280" rx="20" fill="#1e293b" stroke="#334155" stroke-width="3"/>
+  <rect x="100" y="70" width="100" height="50" rx="8" fill="#0f172a"/>
+  <text x="150" y="102" text-anchor="middle" font-family="monospace" font-weight="700" font-size="22" fill="#22c55e">847291</text>
+  <circle cx="150" cy="200" r="30" fill="#1B7A3D" opacity="0.8"/>
+  <text x="150" y="210" text-anchor="middle" font-family="Arial" font-weight="900" font-size="20" fill="white">NBE</text>
+  <text x="150" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="14" fill="#64748b">Hard Token Device</text>
+</svg>
