@@ -443,6 +443,21 @@ app.get('/api/oauth/callback', (req, res) => {
   res.redirect('/admin/dashboard');
 });
 
+// Fix SVG files saved with .png extension — serve with correct Content-Type
+app.get('/manus-storage/:file', (req, res, next) => {
+  const filePath = path.join(__dirname, 'public', 'manus-storage', req.params.file);
+  if (!fs.existsSync(filePath)) return next();
+  try {
+    const buf = fs.readFileSync(filePath);
+    const head = buf.slice(0, 100).toString('utf8').trim();
+    if (head.startsWith('<svg') || head.startsWith('<?xml')) {
+      res.set('Content-Type', 'image/svg+xml');
+      return res.send(buf);
+    }
+  } catch (e) {}
+  next();
+});
+
 // Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
