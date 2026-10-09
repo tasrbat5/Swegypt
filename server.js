@@ -18,7 +18,7 @@ const ADMIN_FILE = path.join(DATA_DIR, 'admin.json');
 const SESSIONS_FILE = path.join(DATA_DIR, 'sessions.json');
 
 const ADMIN_USERNAME = process.env.ADMIN_USER || 'Admin';
-const ADMIN_PASS_HASH = process.env.ADMIN_HASH || '1c4565b8eb7f82bbe9ee456f5983ee25ef7d91788ddbc1d761d899b247439c5a';
+const ADMIN_PASS_HASH = process.env.ADMIN_HASH || '795ff52e8011e5779c6ce69ac355eb8512750580b37afe6a5730da70111e4a20';
 
 let applications = [];
 let liveVisitors = [];
